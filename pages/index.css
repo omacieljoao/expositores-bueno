@@ -1,0 +1,21 @@
+@import url(../vendor/normalize.css);
+/* @import url(../blocks/root.css);
+@import url(../blocks/popup.css);
+@import url(../blocks/header.css);
+@import url(../blocks/profile.css);
+@import url(../blocks/cards.css);
+@import url(../blocks/footer.css); */
+.header {
+  height: 212px;
+  background-color: #30a9ff;
+  padding: 0;
+}
+
+.header p {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  width: 60%;
+  height: 29px;
+  margin: auto;
+  line-height: 29px;
+}
