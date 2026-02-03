@@ -43,15 +43,101 @@
   </head>
   <body>
     <div class="page">
-      <header class="header">
-        <div>
-          <p>
-            <img src="./images/callPhone.png" alt="telefone" /> Ligue agora +55
-            (51) 99603-4579
-          </p>
-        </div>
-      </header>
+     <header class="header">
+  <!-- Top bar -->
+  <div class="header-top">
+    <div class="header-top-left">
+      <img src="./images/callPhone.png" alt="Telefone" />
+      <p>Ligue agora +55 (51) 99603-4579</p>
     </div>
+
+    <div class="header-top-right">
+      <img src="./images/boxArrow.png" alt="Área do Cliente" />
+      <a href="#">ÁREA DO CLIENTE</a>
+    </div>
+  </div>
+
+  <!-- Main header -->
+  <div class="header-main">
+    <div class="header-logo">
+      <img src="./images/expo-bueno-logo.jpg" alt="Expositores Bueno" />
+    </div>
+
+    <div class="header-search">
+      <select>
+        <option>Todos os produtos</option>
+      </select>
+
+      <input type="text" placeholder="Buscar produtos" />
+      <button aria-label="Buscar">🔍</button>
+    </div>
+
+    <div class="header-cart">
+      <img src="./images/cartLogo.png">
+      <a href="#">Meu Carrinho</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="header-nav">
+    <ul>
+      <li><a href="#">INÍCIO</a></li>
+      <li class="has-dropdown"><a href="#">ARARAS ▾</a></li>
+      <li class="has-dropdown"><a href="#">BALCÕES ▾</a></li>
+      <li class="has-dropdown"><a href="#">CAIXAS ▾</a></li>
+      <li class="has-dropdown"><a href="#">PRATELEIRAS ▾</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <div class="content-container">
+      <nav class="breadcrumb">
+        <div class="breadcrumb-content">
+          <a href="/" class="breadcrumb-link">
+            <img src="./images/homeVector.png" alt="Homepage" class="home-icon">
+            Homepage
+          </a>
+          <span class="breadcrumb-separator">>></span>
+          <span class="breadcrumb-current">Produtos</span>
+        </div>
+      </nav>
+<section class="carousel-section">
+  <div class="carousel-container">
+    <button class="carousel-prev" id="prevBtn">‹</button>
+    
+    <div class="carousel-wrapper">
+      <img src="./images/balcaoVitrine.png" class="carousel-item active" alt="Banner 1">
+      <img src="./images/balcaoCaixaRodape.png" class="carousel-item" alt="Banner 2">
+    </div>
+
+    <button class="carousel-next" id="nextBtn">›</button>
+  </div>
+</section>
+
+<section class="categories-grid">
+  <div class="category-card card-blue">
+    <h3>ARARAS</h3>
+    <a href="#">CLIQUE AQUI <span>→</span></a>
+  </div>
+
+  <div class="category-card card-orange">
+    <h3>CABIDES</h3>
+    <a href="#">CLIQUE AQUI <span>→</span></a>
+  </div>
+
+  <div class="category-card card-red">
+    <h3>MANEQUINS</h3>
+    <a href="#">CLIQUE AQUI <span>→</span></a>
+  </div>
+
+  <div class="category-card card-light-blue">
+    <h3>CANALETADOS E ACESSÓRIOS</h3>
+    <a href="#">CLIQUE AQUI <span>→</span></a>
+  </div>
+  
+  </section>
+  </div>
+
     <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
