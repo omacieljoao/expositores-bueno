@@ -38,7 +38,7 @@
       content="https://www.expositoresbueno.com.br/img/og-image.jpg"
     />
 
-    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <title>Expositores Bueno | Expositores e Displays para Lojas</title>
   </head>
   <body>
@@ -64,13 +64,16 @@
     </div>
 
     <div class="header-search">
-      <select>
-        <option>Todos os produtos</option>
-      </select>
+  <select id="search-category">
+    <option value="Todos">Todos os produtos</option>
+    <option value="Araras">Araras</option>
+    <option value="Manequins">Manequins</option>
+    <option value="Cabides">Cabides</option>
+  </select>
 
-      <input type="text" placeholder="Buscar produtos" />
-      <button aria-label="Buscar">🔍</button>
-    </div>
+  <input type="text" id="search-input" placeholder="Buscar produtos" />
+  <button id="search-btn" aria-label="Buscar">🔍</button>
+</div>
 
     <div class="header-cart">
       <img src="./images/cartLogo.png">
@@ -80,14 +83,41 @@
 
   <!-- Navigation -->
   <nav class="header-nav">
-    <ul>
-      <li><a href="#">INÍCIO</a></li>
-      <li class="has-dropdown"><a href="#">ARARAS ▾</a></li>
-      <li class="has-dropdown"><a href="#">BALCÕES ▾</a></li>
-      <li class="has-dropdown"><a href="#">CAIXAS ▾</a></li>
-      <li class="has-dropdown"><a href="#">PRATELEIRAS ▾</a></li>
-    </ul>
-  </nav>
+  <ul>
+    <li><a href="#">INÍCIO</a></li>
+    
+    <li class="has-dropdown">
+      <a href="#">ARARAS ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Araras de Parede</a></li>
+        <li><a href="#">Araras de Chão</a></li>
+        <li><a href="#">Araras Desmontáveis</a></li>
+      </ul>
+    </li>
+
+    <li class="has-dropdown">
+      <a href="#">BALCÕES ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Balcões de Vidro</a></li>
+        <li><a href="#">Balcões de Madeira</a></li>
+        <li><a href="#">Balcões de Atendimento</a></li>
+      </ul>
+    </li>
+
+    <li class="has-dropdown">
+      <a href="#">CAIXAS ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Balcões de Vidro</a></li>
+        <li><a href="#">Balcões de Madeira</a></li>
+        <li><a href="#">Balcões de Atendimento</a></li>
+      </ul>
+    </li>
+
+    <li class="has-dropdown">
+      <a href="./pages/projetos3D.html">PROJETOS 3D</a>
+    </li>
+  </ul>
+</nav>
 </header>
 
   <div class="content-container">
@@ -106,8 +136,13 @@
     <button class="carousel-prev" id="prevBtn">‹</button>
     
     <div class="carousel-wrapper">
-      <img src="./images/balcaoVitrine.png" class="carousel-item active" alt="Banner 1">
-      <img src="./images/balcaoCaixaRodape.png" class="carousel-item" alt="Banner 2">
+      <img src="./images/araraMDFColmeia.png" class="carousel-item active" alt="Arara MDF Colmeia">
+      <img src="./images/armarioColmeia.png" class="carousel-item" alt="Armario Colmeia">
+      <img src="./images/balcaoCaixa.png" class="carousel-item" alt="Balcão Caixa">
+      <img src="./images/balcaoCaixaRodape.png" class="carousel-item" alt="Balcão Caixa C/Rodapé">
+      <img src="./images/balcaoCaixaVitrine.png" class="carousel-item" alt="Balcão Caixa Vitrine">
+      <img src="./images/balcaoPrateleiras.png" class="carousel-item" alt="Balcão C/Prateleiras">
+      <img src="./images/balcaoVitrine.png" class="carousel-item" alt="Balcão Vitrine">
     </div>
 
     <button class="carousel-next" id="nextBtn">›</button>
@@ -121,21 +156,128 @@
   </div>
 
   <div class="category-card card-orange">
-    <h3>CABIDES</h3>
+    <h3>BALCÕES</h3>
     <a href="#">CLIQUE AQUI <span>→</span></a>
   </div>
 
   <div class="category-card card-red">
-    <h3>MANEQUINS</h3>
+    <h3>CAIXAS</h3>
     <a href="#">CLIQUE AQUI <span>→</span></a>
   </div>
 
   <div class="category-card card-light-blue">
-    <h3>CANALETADOS E ACESSÓRIOS</h3>
+    <h3>COLMEIAS</h3>
+    <a href="#">CLIQUE AQUI <span>→</span></a>
+  </div>
+
+  <div class="category-card card-light-blue">
+    <h3>EXPOSITORES</h3>
+    <a href="#">CLIQUE AQUI <span>→</span></a>
+  </div>
+  <div class="category-card card-red">
+    <h3>EXPOSITORES</h3>
     <a href="#">CLIQUE AQUI <span>→</span></a>
   </div>
   
   </section>
+
+  <main class="product-page">
+  <div class="container-main">
+    <aside class="filters-sidebar">
+      <div class="filter-group">
+        <h4>CATEGORIAS</h4>
+        <ul class="filter-list" id="category-filters">
+          <li class="filter-item" data-category="Araras">Araras</li>
+          <li class="filter-item" data-category="Balcões">Balcões</li>
+          <li class="filter-item" data-category="Cabides">Cabides</li>
+          <li class="filter-item" data-category="Expositores">Expositores</li>
+          <li class="filter-item" data-category="Manequins">Manequins</li>
+        </ul>
+      </div>
+
+      <div class="filter-group">
+        <h4>PREÇOS</h4>
+        <div class="price-inputs">
+          <label>De</label>
+          <input type="number" id="price-min" placeholder="0">
+          <label>Até</label>
+          <input type="number" id="price-max" placeholder="999">
+          <button class="btn-filter" id="btn-filter-price">Filtrar</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <h4>Tamanho</h4>
+        <select id="size-select" class="filter-dropdown">
+          <option value="">Selecione o tamanho</option> <option value="Pequeno">Pequeno</option>
+          <option value="Médio">Médio</option>
+          <option value="Grande">Grande</option>
+          <option value="Extra Grande">Extra Grande</option>
+        </select>
+      </div>
+
+      <button id="clear-filters" class="btn-clear">Limpar Filtros</button>
+    </aside>
+
+    <section class="products-content">
+      <div class="products-header">
+        <select id="sort-products">
+          <option value="relevance">Ordenar por: Relevância</option>
+          <option value="price-asc">Menor Preço</option>
+          <option value="price-desc">Maior Preço</option>
+        </select>
+      </div>
+
+      <div class="products-grid" id="products-grid"></div>
+    </section>
+  </div>
+  <div class="pagination-container">
+    <button class="page-btn btn-prev" onclick="paginaAnterior()">Anterior</button>
+    <div class="page-numbers">
+      </div>
+    <button class="page-btn btn-next" onclick="proximaPagina()">Próximo</button>
+  </div>
+</main>
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Endereço</h3>
+      <ul class="footer-info">
+        <li>
+          <i class="location-icon"></i> 
+          <a href="#">Av. Boqueirão 804, Canoas, RS, 92410-350</a>
+        </li>
+        <li>
+          <i class="phone-icon"></i>
+          <span>(51) 99603-4579<br>(51) 3032-1020<br>(51) 3032-1414</span>
+        </li>
+        <li>
+          <i class="instagram-icon"></i>
+          <a href="#">@expositoresbueno</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>HORÁRIO DE ATENDIMENTO</h3>
+      <table class="schedule-table">
+        <tr><td>Segunda- Feira</td><td>08:30 às 18:00</td></tr>
+        <tr><td>Terça-Feira</td><td>08:30 às 18:00</td></tr>
+        <tr><td>Quarta-Feira</td><td>08:30 às 18:00</td></tr>
+        <tr><td>Quinta-Feira</td><td>08:30 às 18:00</td></tr>
+        <tr><td>Sexta-Feira</td><td>08:30 às 18:00</td></tr>
+        <tr><td>Sábado</td><td>Fechado</td></tr>
+        <tr><td>Domingo</td><td>Fechado</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>BUENO INDÚSTRIA E COMÉRCIO DE EXPOSITORES LTDA</p>
+    <p>CNPJ 40.494.084.0001.81</p>
+    <p>Av. Boqueirão 804, Canoas, RS, 92410-350</p>
+  </div>
+</footer>
   </div>
 
     <script type="module" src="./scripts/index.js"></script>
