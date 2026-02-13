@@ -122,7 +122,9 @@ document.addEventListener('click', function(e) {
     });
   }
 });
-
+/* ==========================================================================
+   LÓGICA DOS CARDS DE PRODUTOS
+   ========================================================================== */
 
 // 1. Banco de dados de produtos
 const produtos = [
@@ -149,13 +151,24 @@ function atualizarTela() {
 const grid = document.getElementById('products-grid');
 
 // 2. Função para renderizar os cards com as classes CORRETAS para o CSS
+// 2. Função para renderizar os cards dinamicamente
 function renderizarProdutos(lista) {
   if(!grid) return;
   grid.innerHTML = ""; 
   
   lista.forEach(prod => {
-    const card = `
-      <div class="product-card">
+    // Cria a div principal do card
+    const cardDiv = document.createElement('div');
+    cardDiv.className = 'product-card';
+    cardDiv.style.cursor = 'pointer'; 
+    
+    // Adiciona o evento de redirecionamento no card inteiro
+    cardDiv.addEventListener('click', () => {
+      window.location.href = `./pages/produtcDetails.html?id=${prod.id}`; 
+    });
+
+    // Injeta o conteúdo HTML (agora sem o botão .btn-add-cart)
+    cardDiv.innerHTML = `
         <div class="product-image-container">
           <span class="category-badge">${prod.categoria.toUpperCase()}</span>
           <img src="${prod.img}" alt="${prod.nome}" class="product-img">
@@ -167,18 +180,47 @@ function renderizarProdutos(lista) {
               <span class="price-label">A partir de</span>
               <span class="price-value">R$ ${prod.preco.toFixed(2).replace('.', ',')}</span>
             </div>
-            <button class="btn-add-cart">
-              <img src="./images/cartLogo.png" alt="Carrinho" ">
-            </button>
           </div>
         </div>
-      </div>
     `;
-    grid.innerHTML += card;
+
+    // Adiciona o card pronto na tela
+    grid.appendChild(cardDiv);
   });
 }
 
-// 3. Lógica de Filtragem por Categoria
+document.addEventListener('DOMContentLoaded', () => {
+  
+  const categoryCards = document.querySelectorAll('.category-card');
+  const productSection = document.querySelector('.product-page'); 
+  categoryCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault(); 
+
+      const targetCategory = card.getAttribute('data-category');
+
+      if (!targetCategory) return; 
+
+      //Efeito de Deslizar: Rola a página suavemente até a seção de produtos
+      if (productSection) {
+        productSection.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+      }
+      const sidebarFilter = document.querySelector(`.filter-item[data-category="${targetCategory}"]`);
+      
+      if (sidebarFilter) {
+        sidebarFilter.click(); // Dispara o evento de clique do seu filtro existente
+      } else {
+        console.warn(`Filtro lateral não encontrado para a categoria: ${targetCategory}`);
+        
+      }
+    });
+  });
+
+});
+// Lógica de Filtragem por Categoria
 document.querySelectorAll('.filter-list li').forEach(item => {
   item.addEventListener('click', () => {
     const categoriaSelecionada = item.textContent.trim();

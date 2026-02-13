@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre a Empresa | Expositores Bueno</title>
-    <link rel="stylesheet" href="./pages/about.css" />
-    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="stylesheet" href="../styles/about.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
 
     <!-- SEO básico -->
     <meta
@@ -31,57 +31,72 @@
   </head>
 
   <body>
+    <title>Expositores Bueno | Expositores e Displays para Lojas</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="header-top">
+          <div class="header-top-left">
+            <img src="../images/callPhone.png" alt="Telefone" />
+            <p>Ligue agora +55 (51) 99603-4579</p>
+          </div>
+        </div>
+
+        <div class="header-main">
+          <div class="header-logo">
+            <img src="../images/expo-bueno-logo.jpg" alt="Expositores Bueno" />
+          </div>
+
+          <div class="header-search">
+            <select id="search-category">
+              <option value="Todos">Todos os produtos</option>
+              <option value="Araras">Araras</option>
+              <option value="Manequins">Manequins</option>
+              <option value="Cabides">Cabides</option>
+            </select>
+            <input type="text" id="search-input" placeholder="Buscar produtos" />
+            <button id="search-btn" aria-label="Buscar">🔍</button>
+          </div>
+        </div>
     <!-- ================= HEADER ================= -->
-    <header class="header">
-      <!-- Top bar -->
-      <div class="header-top">
-        <div class="header-top-left">
-          <img src="./images/callPhone.png" alt="Telefone" />
-          <p>Ligue agora +55 (51) 99603-4579</p>
-        </div>
-
-        <div class="header-top-right">
-          <img src="./images/boxArrow.png" alt="Área do Cliente" />
-          <a href="#">ÁREA DO CLIENTE</a>
-        </div>
-      </div>
-
-      <!-- Main header -->
-      <div class="header-main">
-        <div class="header-logo">
-          <img src="./images/expo-bueno-logo.jpg" alt="Expositores Bueno" />
-        </div>
-
-        <div class="header-search">
-          <select>
-            <option>Todos os produtos</option>
-          </select>
-
-          <input type="text" placeholder="Buscar produtos" />
-          <button aria-label="Buscar">🔍</button>
-        </div>
-
-        <div class="header-cart">
-          <img src="./images/cartLogo.png" />
-          <a href="#">Meu Carrinho</a>
-        </div>
-      </div>
-
-      <!-- Navigation -->
-      <nav class="header-nav">
-        <ul>
-          <li><a href="#">INÍCIO</a></li>
-          <li class="has-dropdown"><a href="#">ARARAS ▾</a></li>
-          <li class="has-dropdown"><a href="#">BALCÕES ▾</a></li>
-          <li class="has-dropdown"><a href="#">CAIXAS ▾</a></li>
-          <li class="has-dropdown"><a href="#">PRATELEIRAS ▾</a></li>
-        </ul>
-      </nav>
-    </header>
+    <nav class="header-nav">
+          <ul>
+            <li><a href="../index.html">INÍCIO</a></li>
+            <li class="has-dropdown">
+              <a href="#">ARARAS ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Araras de Parede</a></li>
+                <li><a href="#">Araras de Chão</a></li>
+                <li><a href="#">Araras Desmontáveis</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="#">BALCÕES ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Balcões de Vidro</a></li>
+                <li><a href="#">Balcões de Madeira</a></li>
+                <li><a href="#">Balcões de Atendimento</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="#">CAIXAS ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Balcões de Vidro</a></li>
+                <li><a href="#">Balcões de Madeira</a></li>
+                <li><a href="#">Balcões de Atendimento</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="./pages/projetos3D.html">PROJETOS 3D</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
     <!-- ================= BANNER ================= -->
     <section class="banner-sobre">
-      <img src="./images/sobre_empresa.jpg" alt="Expositores Bueno" />
+      <img src="../images/sobre_empresa.jpg" alt="Expositores Bueno" />
     </section>
 
     <!-- ================= SOBRE ================= -->
@@ -171,26 +186,57 @@
     </section>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="footer">
-      <div class="container footer-content">
-        <div>
-          <h4>Endereço</h4>
-          <p>Rua Exemplo, 123<br />Rio Grande do Sul</p>
-        </div>
+    <footer class="main-footer">
+          <div class="footer-container">
+            <div class="footer-column">
+              <h3>Endereço</h3>
+              <ul class="footer-info">
+                <li>
+                  <i class="location-icon"></i>
+                  <a href="#">Av. Boqueirão 804, Canoas, RS, 92410-350</a>
+                </li>
+                <li>
+                  <i class="phone-icon"></i>
+                  <span>(51) 99603-4579<br>(51) 3032-1020<br>(51) 3032-1414</span>
+                </li>
+                <li class="instagram-icon">
+                  <img src="../images/instagramIcon.png" alt="Instagram">
+                  <a href="#">@expositoresbueno</a>
+                </li>
+              </ul>
+            </div>
 
-        <div>
-          <h4>Contato</h4>
-          <p>(51) 3032-1020<br />(51) 99603-4579</p>
-        </div>
+            <div class="footer-column">
+              <h3>HORÁRIO DE ATENDIMENTO</h3>
+              <table class="schedule-table">
+              
+                <tr><td>Segunda-Feira</td><td>08:30 às 18:00</td></tr>
+                <tr><td>Terça-Feira</td><td>08:30 às 18:00</td></tr>
+                <tr><td>Quarta-Feira</td><td>08:30 às 18:00</td></tr>
+                <tr><td>Quinta-Feira</td><td>08:30 às 18:00</td></tr>
+                <tr><td>Sexta-Feira</td><td>08:30 às 18:00</td></tr>
+                <tr><td>Sábado</td><td>Fechado</td></tr>
+                <tr><td>Domingo</td><td>Fechado</td></tr>
+              </table>
+            </div>
 
-        <div>
-          <h4>Horário</h4>
-          <p>Seg a Sex: 08h às 18h<br />Sáb: 08h às 12h</p>
-        </div>
+            <div class="footer-column">
+        <h3>QUEM SOMOS</h3>
+        <ul class="footer-info">
+          <li>
+            <a href="./about.html">Nossa História</a>
+          </li>
+        </ul>
       </div>
-
-      <p class="copy">© Expositores Bueno — Todos os direitos reservados</p>
-    </footer>
+          </div>
+          
+          <div class="footer-bottom">
+            <p>BUENO INDÚSTRIA E COMÉRCIO DE EXPOSITORES LTDA</p>
+            <p>CNPJ 40.494.084.0001.81</p>
+            <p>Av. Boqueirão 804, Canoas, RS, 92410-350</p>
+          </div>
+          <p class="copy">© Expositores Bueno — Todos os direitos reservados</p>
+        </footer>
 
     <!-- WhatsApp flutuante -->
     <a
@@ -201,5 +247,7 @@
     >
       <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <script type="module" src="../scripts/index.js"></script>
   </body>
 </html>
