@@ -51,14 +51,9 @@
               </ul>
             </li>
             <li class="has-dropdown">
-      <a href="#">CAIXAS ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Balcões de Vidro</a></li>
-        <li><a href="#">Balcões de Madeira</a></li>
-        <li><a href="#">Balcões de Atendimento</a></li>
-      </ul>
-    </li>
-            <li class="has-dropdown"><a href="#">PROJETOS 3D</a></li>
+            <a href="../pages/instalacoes.html">INSTALAÇÕES</a>
+          </li>
+            <li class="has-dropdown"><a href="../pages/projetos3D.html">PROJETOS 3D</a></li>
           </ul>
         </nav>
       </header>
@@ -76,41 +71,35 @@
         </nav>
 
         <main class="product-container">
-  <div class="product-layout">
-    <div class="product-image-section">
-      <img id="main-product-img" src="" alt="Imagem do Produto">
-    </div>
+  <main class="product-container">
+          <div class="product-layout">
+            
+            <div class="product-image-section">
+              <img id="main-product-img" src="" alt="Imagem do Produto">
+            </div>
 
-    <div class="product-info-section">
-      <h1 id="product-title">Carregando...</h1>
-      <span id="product-category" class="badge-category"></span>
-      
-      <div class="price-container">
-        <span class="currency">R$</span>
-        <span id="product-price" class="price-value">0,00</span>
-      </div>
+            <div class="product-info-section">
+              <h1 id="product-title">Carregando...</h1>
+              <span id="product-category" class="badge-category"></span>
+              
+              <div class="price-container">
+                <span class="currency">R$</span>
+                <span id="product-price" class="price-value">0,00</span>
+              </div>
 
-      <div class="selector-group">
-        <label>Selecione o tamanho:</label>
-        <div id="size-options" class="options-grid">
+              <div class="product-description-side">
+                <p id="product-desc"></p>
+              </div>
+
+              <div class="purchase-actions">
+                <a href="https://wa.me/5551996034579" target="_blank" id="btn-whatsapp-product" class="btn-whatsapp-large">
+                  <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento
+                </a>
+              </div>
+              
+            </div>
           </div>
-      </div>
-
-      <div class="purchase-actions">
-        <div class="quantity-selector">
-          <button onclick="changeQty(-1)">-</button>
-          <input type="number" id="qty" value="1" min="1">
-          <button onclick="changeQty(1)">+</button>
-        </div>
-        <button class="btn-add-cart">Adicionar ao Carrinho</button>
-      </div>
-    </div>
-  </div>
-
-  <section class="product-description">
-    <h3>Descrição</h3>
-    <p id="product-desc"></p>
-  </section>
+        </main>
 </main>
       <footer class="main-footer">
         <div class="footer-container">
@@ -127,7 +116,7 @@
               </li>
               <li>
                 <i class="instagram-icon"></i>
-                <a href="#">@expositoresbueno</a>
+                <a href="https://www.instagram.com/expositoresbueno/">@expositoresbueno</a>
               </li>
             </ul>
           </div>
@@ -154,7 +143,7 @@
       </footer>
     </div>
     <script type="module" src="../scripts/index.js"></script>
-    <script type="module" src="../scripts/produtcDetails.js"></script>
+    <script type="module" src="../scripts/productDetails.js"></script>
     <!-- WhatsApp flutuante -->
     <a
       href="https://wa.me/5551996034579"

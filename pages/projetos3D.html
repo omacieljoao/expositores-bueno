@@ -27,43 +27,51 @@
           <div class="header-logo">
             <img src="../images/expo-bueno-logo.jpg" alt="Expositores Bueno" />
           </div>
+
           <div class="header-search">
             <select id="search-category">
               <option value="Todos">Todos os produtos</option>
-              <option value="Araras">Araras</option>
-              <option value="Manequins">Manequins</option>
-              <option value="Cabides">Cabides</option>
+              
+              <option value="BALCÃO CAIXA C/ RODAPÉ">Balcão Caixa c/ Rodapé</option>
+              <option value="BALCÃO CAIXA COM VITRINE">Balcão Caixa com Vitrine</option>
+              <option value="BALCÃO CAIXA COM VITRINE (PRETO)">Balcão Caixa com Vitrine (Preto)</option>
+              <option value="BALCÃO VITRINE">Balcão Vitrine</option>
+              <option value="BALCÃO CAIXA (FECHADO)">Balcão Caixa (Fechado)</option>
+              
+              <option value="ARMÁRIO COLMEIA">Armário Colmeia</option>
+              <option value="MÓVEL COM PRATELEIRAS">Móvel com Prateleiras</option>
+              
+              <option value="ARARA DE MDF COM COLMEIA">Arara de MDF com Colmeia</option>
+              <option value="ARARA DE MDF (SIMPLES)">Arara de MDF (Simples)</option>
+              <option value="ARARA DE MDF COM COLMEIA LATERAL">Arara de MDF c/ Colmeia Lateral</option>
+              <option value="MÓVEL COM PRATELEIRAS">Móveis</option>
             </select>
             <input type="text" id="search-input" placeholder="Buscar produtos" />
             <button id="search-btn" aria-label="Buscar">🔍</button>
           </div>
-          
         </div>
 
-        <nav class="header-nav">
+       <nav class="header-nav">
           <ul>
             <li><a href="../index.html">INÍCIO</a></li>
-            <li class="has-dropdown"><a href="#">ARARAS ▾</a>
+
+            <li class="has-dropdown">
+              <a href="javascript:void(0)">MAIS VENDIDOS ▾</a>
               <ul class="dropdown-menu">
-                <li><a href="#">Araras de Parede</a></li>
-                <li><a href="#">Araras de Chão</a></li>
-                <li><a href="#">Araras Desmontáveis</a></li>
+                <li><a href="#" data-filter="BALCÃO CAIXA COM VITRINE">Balcão Caixa c/ Vitrine</a></li>
+                <li><a href="#" data-filter="ARMÁRIO COLMEIA">Armário Colmeia</a></li>
+                <li><a href="#" data-filter="MÓVEL COM PRATELEIRAS">Móvel c/ Prateleiras</a></li>
+                <li><a href="#" data-filter="ARARA DE MDF COM COLMEIA">Arara c/ Colmeia</a></li>
               </ul>
             </li>
-            <li class="has-dropdown"><a href="#">BALCÕES ▾</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Balcões de Vidro</a></li>
-                <li><a href="#">Balcões de Madeira</a></li>
-              </ul>
+
+            <li class="has-dropdown">
+              <a href=".#">PROJETOS 3D</a>
             </li>
-            <li class="has-dropdown"><a href="#">CAIXAS ▾</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Balcões de Vidro</a></li>
-                <li><a href="#">Balcões de Madeira</a></li>
-                <li><a href="#">Balcões de Atendimento</a></li>
-              </ul>
+
+            <li class="has-dropdown">
+              <a href="../pages/instalacoes.html">INSTALAÇÕES</a>
             </li>
-            <li class="has-dropdown"><a href="#">PROJETOS 3D</a></li>
           </ul>
         </nav>
       </header>
@@ -138,48 +146,24 @@
               <h2 class="title-orange">Projetos Desenvolvidos</h2>
               
               <div class="gallery-grid">
-                <div class="gallery-card">
-                  <div class="card-img-container">
-                    <img src="../images/cards/araraMDFColmeia.jpg" alt="Loja Feminina">
-                    <button class="btn-overlay-view">Visualizar</button>
-                  </div>
-                  <div class="gallery-info">
-                    <h3>LOJA DE MODA FEMININA</h3>
-                    <p>Área de parede com painéis canaletados e balcões de atendimento sob medida.</p>
-                  </div>
+                <div class="gallery-image-wrapper" data-projeto="LOJA DE MODA FEMININA">
+                  <img src="../images/projeto-1.jpg" alt="Projeto 1">
+                  <div class="image-overlay"><span>Ampliar Projeto</span></div>
                 </div>
 
-                <div class="gallery-card">
-                  <div class="card-img-container">
-                    <img src="../images/arara.jpg" alt="Loja Masculina">
-                    <button class="btn-overlay-view">Visualizar</button>
-                  </div>
-                  <div class="gallery-info">
-                    <h3>LOJA DE MODA MASCULINA</h3>
-                    <p>Layout otimizado com araras desmontáveis e expositores industriais.</p>
-                  </div>
+                <div class="gallery-image-wrapper" data-projeto="LOJA DE MODA MASCULINA">
+                  <img src="../images/projeto-2.jpg" alt="Projeto 2">
+                  <div class="image-overlay"><span>Ampliar Projeto</span></div>
                 </div>
 
-                <div class="gallery-card">
-                  <div class="card-img-container">
-                    <img src="../images/manequim.jpg" alt="Boutique Infantil">
-                    <button class="btn-overlay-view">Visualizar</button>
-                  </div>
-                  <div class="gallery-info">
-                    <h3>BOUTIQUE INFANTIL</h3>
-                    <p>Visualização 3D completa com foco em manequins e prateleiras iluminadas.</p>
-                  </div>
+                <div class="gallery-image-wrapper" data-projeto="BOUTIQUE INFANTIL">
+                  <img src="../images/projeto-3.jpg" alt="Projeto 3">
+                  <div class="image-overlay"><span>Ampliar Projeto</span></div>
                 </div>
 
-                <div class="gallery-card">
-                  <div class="card-img-container">
-                    <img src="../images/cards/araraMDFColmeia.jpg" alt="Loja Geral">
-                    <button class="btn-overlay-view">Visualizar</button>
-                  </div>
-                  <div class="gallery-info">
-                    <h3>SHOWROOM COMERCIAL</h3>
-                    <p>Projeto de iluminação e disposição de gôndolas para grandes fluxos.</p>
-                  </div>
+                <div class="gallery-image-wrapper" data-projeto="SHOWROOM COMERCIAL">
+                  <img src="../images/projeto-4.jpg" alt="Projeto 4">
+                  <div class="image-overlay"><span>Ampliar Projeto</span></div>
                 </div>
               </div>
             </div>
@@ -187,6 +171,19 @@
 
         </main>
       </div>
+      </main>
+        
+        <div id="projeto-modal" class="modal-overlay">
+          <span class="modal-close">&times;</span>
+          <div class="modal-content-wrapper">
+            <span class="modal-prev">&#10094;</span>
+            <img id="modal-main-img" src="" alt="Projeto 3D Ampliado">
+            <span class="modal-next">&#10095;</span>
+            
+            <p id="modal-caption"></p>
+          </div>
+        </div>
+        </div> <footer class="main-footer">
 
       <footer class="main-footer">
           <div class="footer-container">
@@ -202,8 +199,8 @@
                   <span>(51) 99603-4579<br>(51) 3032-1020<br>(51) 3032-1414</span>
                 </li>
                 <li class="instagram-icon">
-                  <img src="./images/instagramIcon.png" alt="Instagram">
-                  <a href="#">@expositoresbueno</a>
+                  <img src="../images/instagramIcon.png" alt="Instagram">
+                  <a href="https://www.instagram.com/expositoresbueno/">@expositoresbueno</a>
                 </li>
               </ul>
             </div>
@@ -242,6 +239,7 @@
     </div>
     
     <script type="module" src="../scripts/index.js"></script>
+    <script type="module" src="../scripts/projetos3D.js"></script>
     
     <a
       href="https://wa.me/5551996034579"
