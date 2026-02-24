@@ -1,3 +1,23 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+.menu a {
+  font-weight: 500;
+}
+
+.card h4 {
+  font-weight: 600;
+}
+
+.card p {
+  font-weight: 400;
+}
 /* ==========================================================================
    Detalhes dos Produtos
    ========================================================================== */

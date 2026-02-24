@@ -32,70 +32,53 @@
   </head>
 
   <body>
-    <title>Expositores Bueno | Expositores e Displays para Lojas</title>
-  </head>
-  <body>
-    <div class="page">
-      <header class="header">
-        <div class="header-top">
-          <div class="header-top-left">
-            <img src="../images/callPhone.png" alt="Telefone" />
-            <a href="https://wa.me/5551996034579" style="color: white; text-decoration: none;">Ligue agora +55 (51) 99603-4579</a>
-          </div>
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+      <!-- Top bar -->
+      <div class="header-top">
+        <div class="header-top-left">
+          <img src="../images/callPhone.png" alt="Telefone" />
+          <p>Ligue agora +55 (51) 99603-4579</p>
         </div>
 
-        <div class="header-main">
-          <div class="header-logo">
-            <img src="../images/expo-bueno-logo.jpg" alt="Expositores Bueno" />
-          </div>
+        <div class="header-top-right">
+          <img src="../images/boxArrow.png" alt="Área do Cliente" />
+          <a href="#">ÁREA DO CLIENTE</a>
+        </div>
+      </div>
 
-          <div class="header-search">
-            <select id="search-category">
-              <option value="Todos">Todos os produtos</option>
-
-              <option value="BALCÃO CAIXA C/ RODAPÉ">Balcão Caixa c/ Rodapé</option>
-              <option value="BALCÃO CAIXA COM VITRINE">Balcão Caixa com Vitrine</option>
-              <option value="BALCÃO CAIXA COM VITRINE (PRETO)">Balcão Caixa com Vitrine (Preto)</option>
-              <option value="BALCÃO VITRINE">Balcão Vitrine</option>
-              <option value="BALCÃO CAIXA (FECHADO)">Balcão Caixa (Fechado)</option>
-
-              <option value="ARMÁRIO COLMEIA">Armário Colmeia</option>
-              <option value="MÓVEL COM PRATELEIRAS">Móvel com Prateleiras</option>
-
-              <option value="ARARA DE MDF COM COLMEIA">Arara de MDF com Colmeia</option>
-              <option value="ARARA DE MDF (SIMPLES)">Arara de MDF (Simples)</option>
-              <option value="ARARA DE MDF COM COLMEIA LATERAL">Arara de MDF c/ Colmeia Lateral</option>
-              <option value="MÓVEL COM PRATELEIRAS">Móveis</option>
-            </select>
-            <input type="text" id="search-input" placeholder="Buscar produtos" />
-            <button id="search-btn" aria-label="Buscar">🔍</button>
-          </div>
+      <!-- Main header -->
+      <div class="header-main">
+        <div class="header-logo">
+          <img src="../images/expo-bueno-logo.jpg" alt="Expositores Bueno" />
         </div>
 
-       <nav class="header-nav">
-          <ul>
-            <li><a href="../index.html">INÍCIO</a></li>
+        <div class="header-search">
+          <select>
+            <option>Todos os produtos</option>
+          </select>
 
-            <li class="has-dropdown">
-              <a href="javascript:void(0)">MAIS VENDIDOS ▾</a>
-              <ul class="dropdown-menu">
-                <li><a href="#" data-filter="BALCÃO CAIXA COM VITRINE">Balcão Caixa c/ Vitrine</a></li>
-                <li><a href="#" data-filter="ARMÁRIO COLMEIA">Armário Colmeia</a></li>
-                <li><a href="#" data-filter="MÓVEL COM PRATELEIRAS">Móvel c/ Prateleiras</a></li>
-                <li><a href="#" data-filter="ARARA DE MDF COM COLMEIA">Arara c/ Colmeia</a></li>
-              </ul>
-            </li>
+          <input type="text" placeholder="Buscar produtos" />
+          <button aria-label="Buscar">🔍</button>
+        </div>
 
-            <li class="has-dropdown">
-              <a href="../pages/projetos3D.html">PROJETOS 3D</a>
-            </li>
+        <div class="header-cart">
+          <img src="../images/cartLogo.png" />
+          <a href="#">Meu Carrinho</a>
+        </div>
+      </div>
 
-            <li class="has-dropdown">
-              <a href="../pages/instalacoes.html">INSTALAÇÕES</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <!-- Navigation -->
+      <nav class="header-nav">
+        <ul>
+          <li><a href="#">INÍCIO</a></li>
+          <li class="has-dropdown"><a href="#">ARARAS ▾</a></li>
+          <li class="has-dropdown"><a href="#">BALCÕES ▾</a></li>
+          <li class="has-dropdown"><a href="#">CAIXAS ▾</a></li>
+          <li class="has-dropdown"><a href="#">PRATELEIRAS ▾</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <!-- ================= BANNER ================= -->
     <section class="banner-sobre">
@@ -189,57 +172,46 @@
     </section>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="main-footer">
-          <div class="footer-container">
-            <div class="footer-column">
-              <h3>Endereço</h3>
-              <ul class="footer-info">
-                <li>
-                  <i class="location-icon"></i>
-                  <a href="#">Av. Boqueirão 804, Canoas, RS, 92410-350</a>
-                </li>
-                <li>
-                  <i class="phone-icon"></i>
-                  <span>(51) 99603-4579<br>(51) 3032-1020<br>(51) 3032-1414</span>
-                </li>
-                <li class="instagram-icon">
-                  <img src="../images/instagramIcon.png" alt="Instagram">
-                  <a href="https://www.instagram.com/expositoresbueno/">@expositoresbueno</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="footer-column">
-              <h3>HORÁRIO DE ATENDIMENTO</h3>
-              <table class="schedule-table">
-
-                <tr><td>Segunda-Feira</td><td>08:30 às 18:00</td></tr>
-                <tr><td>Terça-Feira</td><td>08:30 às 18:00</td></tr>
-                <tr><td>Quarta-Feira</td><td>08:30 às 18:00</td></tr>
-                <tr><td>Quinta-Feira</td><td>08:30 às 18:00</td></tr>
-                <tr><td>Sexta-Feira</td><td>08:30 às 18:00</td></tr>
-                <tr><td>Sábado</td><td>Fechado</td></tr>
-                <tr><td>Domingo</td><td>Fechado</td></tr>
-              </table>
-            </div>
-
-            <div class="footer-column">
-        <h3>QUEM SOMOS</h3>
-        <ul class="footer-info">
-          <li>
-            <a href="./about.html">Nossa História</a>
-          </li>
-        </ul>
-      </div>
+   <footer class="main-footer">
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>Endereço</h3>
+            <ul class="footer-info">
+              <li>
+                <i class="location-icon"></i>
+                <a href="#">Av. Boqueirão 804, Canoas, RS, 92410-350</a>
+              </li>
+              <li>
+                <i class="phone-icon"></i>
+                <span>(51) 99603-4579<br>(51) 3032-1020<br>(51) 3032-1414</span>
+              </li>
+              <li>
+                <i class="instagram-icon"></i>
+                <a href="#">@expositoresbueno</a>
+              </li>
+            </ul>
           </div>
 
-          <div class="footer-bottom">
-            <p>BUENO INDÚSTRIA E COMÉRCIO DE EXPOSITORES LTDA</p>
-            <p>CNPJ 40.494.084.0001.81</p>
-            <p>Av. Boqueirão 804, Canoas, RS, 92410-350</p>
+          <div class="footer-column">
+            <h3>HORÁRIO DE ATENDIMENTO</h3>
+            <table class="schedule-table">
+              <tr><td>Segunda- Feira</td><td>08:30 às 18:00</td></tr>
+              <tr><td>Terça-Feira</td><td>08:30 às 18:00</td></tr>
+              <tr><td>Quarta-Feira</td><td>08:30 às 18:00</td></tr>
+              <tr><td>Quinta-Feira</td><td>08:30 às 18:00</td></tr>
+              <tr><td>Sexta-Feira</td><td>08:30 às 18:00</td></tr>
+              <tr><td>Sábado</td><td>Fechado</td></tr>
+              <tr><td>Domingo</td><td>Fechado</td></tr>
+            </table>
           </div>
-          <p class="copy">© Expositores Bueno — Todos os direitos reservados</p>
-        </footer>
+        </div>
+
+        <div class="footer-bottom">
+          <p>BUENO INDÚSTRIA E COMÉRCIO DE EXPOSITORES LTDA</p>
+          <p>CNPJ 40.494.084.0001.81</p>
+          <p>Av. Boqueirão 804, Canoas, RS, 92410-350</p>
+        </div>
+      </footer>
 
     <!-- WhatsApp flutuante -->
     <a
@@ -250,7 +222,5 @@
     >
       <i class="fa-brands fa-whatsapp"></i>
     </a>
-
-    <script type="module" src="../scripts/index.js"></script>
   </body>
 </html>
